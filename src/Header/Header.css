@@ -1,0 +1,60 @@
+.row-2{
+    background-color: skyblue;
+    height: 70px;
+    
+}
+.nav-item a:hover{
+    text-decoration: none;
+}
+
+a.nav-link9{
+    color:black;
+    font-size: 12px;
+    padding: 0px 0px 0px 0px;
+    margin:2px 5px 2px 5px;
+}
+.container{
+    background-color: transparent;
+    height: 70px;
+    padding-top:17px;
+
+}
+a.nav-link{
+    color: rgb(250, 242, 242);
+    font-size: 20px;
+    padding:.5rem .6rem;
+}
+a.nav-link:hover{
+    color: rgb(211, 220, 228);
+}
+input[type=text]{
+
+    width:175px;
+    font-size: 16px;
+    padding-left: 5px;
+    margin-left: auto;
+    height: 30px;
+    align-self: center;
+    
+}
+ul{
+    
+    float: left;
+}
+.form{
+    float: right;
+    
+}
+ul.nav.justify-content-end{
+    float:right;
+}
+nav.nav-bar.nav-bar-light{
+    padding: 1 1rem;
+}
+#btn{
+    margin-left:0px;
+    font-size: 1em;
+    
+}
+
+

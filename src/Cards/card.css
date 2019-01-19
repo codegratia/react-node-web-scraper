@@ -1,0 +1,29 @@
+
+h4{
+    color: rgb(95, 95, 119) !important;
+        font-family: sans-serif;
+        margin-left: 15px !important;
+        margin-top: 10px !important;
+}
+p{
+    color: rgb(95, 95, 119) !important;
+    font-style: italic;
+    margin-left: 15px !important;
+}
+h6{
+    color: rgb(12, 190, 65) !important;
+
+}
+del{
+    margin-left: -10px;
+    color: rgb(248, 39, 57);
+}
+Icon{
+    margin-left: -4px;
+}
+div .jumbotron{
+    background-image: "./images/slider-2.png";
+}
+.display-4{
+    text-align: center;
+}

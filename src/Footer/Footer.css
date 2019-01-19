@@ -1,0 +1,64 @@
+.Footer {
+    overflow: hidden;
+}
+ul .nav{
+    overflow: hidden;
+}
+.abc{
+    background-color:skyblue;
+    overflow: hidden;
+}
+#row1{
+    width: auto;
+    padding: 2px;
+    
+}
+#row2{
+    background-color: rgb(46, 45, 45);
+    padding-left: 50px;
+    
+}
+
+#Contact{
+   font-family:sans-serif;
+   color: rgb(250, 242, 242);
+   padding-top: 10px;
+   margin-left: 30px;
+   
+   
+}
+.borderless-table {
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none; 
+}
+
+.tbody a{
+    color: white;
+}
+.tbody a:hover{
+    color: rgb(173, 156, 156);
+    text-decoration: none;
+}
+
+#copy-right{
+    text-align: center;
+}
+table{
+    color: white;
+}
+#copy-right{
+    background-color: rgb(40, 40, 40);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+#copy-right a{
+   font-weight: bold;
+   color: white; 
+}
+#copy-right a:hover{
+    text-decoration: none;
+    color: rgb(235, 172, 172);
+}
