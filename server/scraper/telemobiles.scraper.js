@@ -2,36 +2,37 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 
+ exports.mobiles = () =>{
+   
+    var mobiles = [];
+
+
  request('https://www.telemart.pk/mobile-and-tablets/accessories/charger.html', function(error, response, html){
     if(!error && response.statusCode==200){
         var $ = cheerio.load(html);
-        $('div.item-image', html).each(function(i, element){
-            var a =$(this);
-            var url = a.children().attr('href');
-            for(i= 0; i<= url.length;i++){
-                console.log(url[i]);
-            }
-        
+        $('li.col-lg-3', html).each(function(i, element){
+            var item={}
             
+            var list =$(this);
         
+            var title = list.children().children().children().attr('title');
+            // var url = $('div.item-image > a.product-image').attr('href');
+            // var title = $('a.product-image').attr('title');
+            // var image = $('a.product-image > img.lazy ').attr("src");
+            // var price =$('span.regular-price > span.price').text();
+            // var availability =$('div.wrap-pio > span.ins',html).text(),
+            console.log(title);
             
-       exports.mobiles = () => {
-                var data = {
-                url:url
-                     }
-            return data;
-        
-           }
-          
         })
     }
-})
-// exports.mobiles = () =>{
-//     console.log('All Mobiles');
+}).then(result => {
+    console.log('for each ends');
+    console.log(mobiles);
+});
 
-//     var data = {
-//         name: 'ehman',
-//         age: 23
-//         }  
-//      return data;
-//     };
+
+ 
+ 
+ 
+ return mobiles;
+}

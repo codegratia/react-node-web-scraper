@@ -3,7 +3,7 @@ var express = require('express');
 
 var router =express.Router();
 
-const Telemart = require('../scraper/telemart.scraper');
+const Telemart = require('../scraper/telelaptops.scraper');
 router.get('/', function(req, res){
    var laptops = Telemart.alllaptops();
    console.log(laptops);

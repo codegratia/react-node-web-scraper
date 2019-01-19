@@ -16,7 +16,8 @@
     "react-scripts": "2.1.1",
     "react-star-ratings": "^2.3.0",
     "react-swipeable-views": "^0.13.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +33,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }
