@@ -684,6 +684,7 @@ class Category extends Component {
                 </div>
                 {/* end of col 9 */}
             </div>
+            
         </div>
            
 
