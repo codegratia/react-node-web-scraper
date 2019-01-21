@@ -1,11 +1,13 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
-    // let promise = Promise.all(laptops);
-    
-   exports.laptops = () =>{
+
+ exports.mobiles = () =>{
    
-    var laptops = [];
+    var mobiles = [];
+    return new Promise((resolve, reject)=>{
+
+   
  request('https://www.telemart.pk/mobile-and-tablets/accessories/charger.html', function(error, response, html){
     if(!error && response.statusCode==200){
         var $ = cheerio.load(html);
@@ -22,20 +24,15 @@ var cheerio = require('cheerio');
             item.price = list.children('.item-wrap').children('.pro-info').children('.pro-inner').children('.pro-content')
                             .children('.wrap-price').children('.price-box').children('.special-price').children('.price').text();
                                                
-             laptops.push(item);
+             mobiles.push(item);
              
-               console.log(laptops);
-        
+            //   console.log(mobiles);
         })   
     }
 
- 
+    resolve(mobiles);
 
-    
-
+});
+    // return mobiles; 
 })
-  };
-  
-     
-
-    
+}
