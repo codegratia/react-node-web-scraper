@@ -25,10 +25,11 @@ var cheerio = require('cheerio');
                             .children('.wrap-price').children('.price-box').children('.special-price').children('.price').text();
                                                
              accessories.push(item);
+             //skmdfmkfkdfhhfndsfbnfbkjrjnjbkfjbjfjbkkrj
              
             //   console.log(accessories);
-            
-        })   
+            // console.log(asdjnajbsdbd);
+        })  
     }
 
      resolve(accessories);
