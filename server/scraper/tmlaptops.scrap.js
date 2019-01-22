@@ -1,12 +1,14 @@
 var request = require('request');
 var cheerio = require('cheerio');
 
-    // let promise = Promise.all(laptops);
-    
-   exports.laptops = () =>{
+
+ exports.laptops = () =>{
    
-    var laptops = [];
- request('https://www.telemart.pk/mobile-and-tablets/accessories/charger.html', function(error, response, html){
+    var laptops= [];
+    return new Promise((resolve, reject)=>{
+
+   
+ request('https://www.telemart.pk/computer/laptops.html', function(error, response, html){
     if(!error && response.statusCode==200){
         var $ = cheerio.load(html);
         $('li.col-lg-3', html).each(function(i, element){
@@ -23,19 +25,16 @@ var cheerio = require('cheerio');
                             .children('.wrap-price').children('.price-box').children('.special-price').children('.price').text();
                                                
              laptops.push(item);
+            
              
-               console.log(laptops);
-        
-        })   
+            //   console.log(accessories);
+           
+        })  
     }
 
- 
+     resolve(laptops);
 
-    
-
+});
+    // return accessories; 
 })
-  };
-  
-     
-
-    
+}
