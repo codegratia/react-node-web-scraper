@@ -27,10 +27,11 @@ var cheerio = require('cheerio');
              accessories.push(item);
              
             //   console.log(accessories);
+            
         })   
     }
 
-    resolve(accessories);
+     resolve(accessories);
 
 });
     // return accessories; 
