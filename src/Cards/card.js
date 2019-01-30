@@ -14,6 +14,9 @@ import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
 import './card.css';
 import Product from '../Product/Product';
+
+import axios from 'axios';
+
 const styles =theme =>({
      root: {
     flexGrow: 1,
@@ -40,12 +43,34 @@ class GuttersGrid extends React.Component {
       });
     };
   
+    state = {
+      title: []
+    }
+  
+    componentDidMount() {
+      axios.get(`http://localhost:4200/api/tmaccessories`,{
+       
+      })
+        .then(res => {
+          console.log(res);
+          this.setState({ title:res.data });
+        })
+        .catch(error => console.log(error))
+    }
+  
+
+
     render() {
+    let people=['ali','ahmad','saleem']
+    let listpeople=people.map(person => <li>{person}</li>)
+
       const { classes } = this.props;
       const { spacing } = this.state;
   
       return (
+       
         <Router>
+          
           <div>
          <div class="jumbotron jumbotron-fluid">
           <h1 class="display-4">Hello, world!</h1>
@@ -55,11 +80,16 @@ class GuttersGrid extends React.Component {
        </div>
             <div class="row">
               <div class="col-md-4">
-              
+          <ul>
+            {listpeople}
+          </ul>
+               
               <Card className={classes.card}>
                     <CardActionArea>
                         <Typography gutterBottom variant="h5" component="h4">
-                            Lizard ggvdfb
+                        <ul>
+                          { this.state.title.map(title => <li>{title.title}</li>)}
+                        </ul>
                         </Typography>
                         <Typography gutterBottom variant="p" component="p">
                           Lizard
@@ -71,7 +101,7 @@ class GuttersGrid extends React.Component {
                       />
                       <CardContent>
                         <Typography component="p">
-                          Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                      Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                           across all continents except Antarctica
                         </Typography>
                         <Typography gutterBottom variant="h6" component="h6">

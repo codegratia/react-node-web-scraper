@@ -2,9 +2,9 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 
- exports.mobiles = () =>{
+//  exports.laptops = () =>{
    
-    var mobiles = [];
+    var laptops = [];
     return new Promise((resolve, reject)=>{
 
    
@@ -17,22 +17,22 @@ var cheerio = require('cheerio');
         
             item.title = list.children().children().children().attr('title');
             item.url   = list.children().children().children().attr('href');
-            item.image = list.children().children().children('.lazy').attr('src');
+            item.image = list.children().children().children().attr('src');
             item.availability = list.children('div.item-wrap').children('div.pro-info').children('div.pro-inner')
                                    .children('div.wrap-pio').children().text();
             
             item.price = list.children('.item-wrap').children('.pro-info').children('.pro-inner').children('.pro-content')
                             .children('.wrap-price').children('.price-box').children('.special-price').children('.price').text();
-                                               
-             mobiles.push(item);
+                                            
+             laptops.push(item);
              
-             console.log(mobiles);
+             console.log(laptops);   
         })   
     }
-
-    resolve(mobiles);
    
+    resolve(laptops);
+
 });
-      return mobiles; 
+    return laptops; 
 })
-}
+// }

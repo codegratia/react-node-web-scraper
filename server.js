@@ -9,7 +9,7 @@ require('./server/express')(app);
 
 
 
-app.listen(3000, () => {
+app.listen(4200, () => {
     console.log('Server running');
 
 });

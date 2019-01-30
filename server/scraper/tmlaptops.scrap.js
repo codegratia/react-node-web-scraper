@@ -4,7 +4,7 @@ var cheerio = require('cheerio');
 
  exports.laptops = () =>{
    
-    var laptops= [];
+    var laptops = [];
     return new Promise((resolve, reject)=>{
 
    
@@ -25,16 +25,14 @@ var cheerio = require('cheerio');
                             .children('.wrap-price').children('.price-box').children('.special-price').children('.price').text();
                                                
              laptops.push(item);
-            
              
-            //   console.log(accessories);
-           
-        })  
+            //   console.log(laptops);
+        })   
     }
 
-     resolve(laptops);
+    resolve(laptops);
 
 });
-    // return accessories; 
+    // return laptops; 
 })
 }

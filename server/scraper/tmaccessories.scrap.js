@@ -25,14 +25,12 @@ var cheerio = require('cheerio');
                             .children('.wrap-price').children('.price-box').children('.special-price').children('.price').text();
                                                
              accessories.push(item);
-            
              
             //   console.log(accessories);
-           
-        })  
+        })   
     }
 
-     resolve(accessories);
+    resolve(accessories);
 
 });
     // return accessories; 

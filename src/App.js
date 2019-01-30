@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Shops  from './Shops/Shops';
+import ContactUs  from './ContactUs/ContactUs';
 
 
 class App extends Component {
@@ -10,7 +11,8 @@ class App extends Component {
     return (
       <div className="App">
        <Header />
-       <Shops />
+       {/* <Shops /> */}
+       <ContactUs/>
        <Footer />
       </div>
     );

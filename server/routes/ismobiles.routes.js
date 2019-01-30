@@ -3,9 +3,9 @@ var express = require('express');
 
 var router =express.Router();
 
-const Telemart = require('../scraper/tmmobiles.scrap');
+const IShopping = require('../scraper/ismobiles.scrap');
 router.get('/', async function(req, res){
-   var items = await Telemart.mobiles().then(result =>{
+   var items = await IShopping.mobiles().then(result =>{
         return result;
 
          
