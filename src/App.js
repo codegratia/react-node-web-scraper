@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {/* <Shops /> */}
-        <h3>main component placeholder</h3>
+        <Shops />
+        {/* <h3>main component placeholder</h3> */}
         <Footer />
       </div>
     );
