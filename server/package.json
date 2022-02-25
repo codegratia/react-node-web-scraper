@@ -1,0 +1,24 @@
+{
+  "name": "web-scraper-server",
+  "version": "1.0.0",
+  "description": "web scaper",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "web-scraper",
+    "crawler"
+  ],
+  "author": "sulaiman",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cheerio": "^1.0.0-rc.10",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pretty": "^2.0.0",
+    "puppeteer": "^13.4.0"
+  }
+}
