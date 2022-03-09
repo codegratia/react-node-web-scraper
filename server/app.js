@@ -5,6 +5,7 @@ const cors = require("cors");
 app.use(cors());
 
 const scrapeDynamicWebpage = require("./scrapers/dynamincSiteScraper");
+const scrapeStaticWebpage = require("./scrapers/staticSiteScraper");
 const data = require("./data/itemsData.json");
 
 app.get("/", function (req, res) {
@@ -19,4 +20,5 @@ app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
 
-scrapeDynamicWebpage();
+// scrapeDynamicWebpage();
+scrapeStaticWebpage();
