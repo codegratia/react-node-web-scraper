@@ -6,7 +6,7 @@ app.use(cors());
 
 const scrapeDynamicWebpage = require("./scrapers/dynamincSiteScraper");
 const scrapeStaticWebpage = require("./scrapers/staticSiteScraper");
-const data = require("./data/itemsData.json");
+// const data = require("./data/itemsData.json");
 
 app.get("/", function (req, res) {
   res.send("Happy web scraping");
@@ -22,3 +22,4 @@ app.listen(PORT, () => {
 
 // scrapeDynamicWebpage();
 scrapeStaticWebpage();
+scrapeDynamicWebpage();

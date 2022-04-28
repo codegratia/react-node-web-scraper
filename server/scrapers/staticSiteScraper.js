@@ -54,7 +54,7 @@ function processData(data) {
   // console.dir(items);
   // Write items array in itemsData.json file
   fs.writeFile(
-    `${dataDir}itemsData.json`,
+    `${dataDir}ishoppingData.json`,
     JSON.stringify(items, null, 2),
     (err) => {
       if (err) {
