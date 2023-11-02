@@ -27,35 +27,44 @@ Runs the server in development mode with nodemon.
 
 ## Client
 
-The client was bootstrapped with Create React App. 
+This is a [React App](https://react.dev/) bootstrapped with [vite](https://vitejs.dev/).
 
-### Available Scripts
+## Getting Started
 
-In the client directory, you can run:
+For Running the client app:
 
-#### `npm start`
+Steps to follows:
 
-Runs the app in development mode.<br>
-Open http://localhost:3000 to view it in the browser.
+install Dependencies:
 
-#### `npm test`
+```bash
+npm install
+# or
+yarn
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about running tests for more information.
+### Available Scripts:
 
-#### `npm run build`
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs the app in development mode. Open http://localhost:5173 to view it in the browser.
 
-#### `npm run eject`
+```bash
+npm run build
+# or
+yarn build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Builds the app for production to the `dist` folder.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run preview
+# or
+yarn preview
+```
 
-## Learn More
-
-You can learn more in the Create React App documentation.
-
-To learn React, check out the React documentation.
+Preview the production build locally.
