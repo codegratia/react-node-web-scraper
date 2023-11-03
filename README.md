@@ -1,4 +1,4 @@
-# React Nod Web Scraper
+# React Node Web Scraper
 
 This project is a web scraper that consists of a client and a server. The client was bootstrapped with Create React App, and the server uses Express.js, Axios, Cheerio, and Puppeteer for web scraping.
 
