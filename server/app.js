@@ -8,7 +8,6 @@ const path = require("path");
 
 const scrapeDynamicWebpage = require("./scrapers/dynamincSiteScraper");
 const scrapeStaticWebpage = require("./scrapers/staticSiteScraper");
-// const data = require("./data/itemsData.json");
 
 var folder = "./data";
 
@@ -26,11 +25,11 @@ app.get("/api/v1/items", function (req, res) {
       console.error(err);
       res.status(500).send(err);
     } else {
-      let data = {};
+      let data = [];
       files.forEach((file) => {
         const filePath = path.join("./data", file);
         const fileData = JSON.parse(fs.readFileSync(filePath, "utf8"));
-        data[file] = fileData;
+        data = data.concat(fileData);
       });
       res.json(data);
     }
