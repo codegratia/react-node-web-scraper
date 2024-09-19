@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
+import { Row, Col, Card, Typography, Divider } from "antd";
 import "./App.css";
+
+const { Title } = Typography;
+const { Meta } = Card;
 
 function App() {
   const [data, setData] = useState(null);
@@ -13,15 +17,23 @@ function App() {
 
   return (
     <div>
-      <h1>React Node Web Scraper</h1>
-      {data &&
-        data.map((item, index) => (
-          <div key={index}>
-            <h4>{item.name}</h4>
-            <img src={item.img} alt={item.name} width={100} height={100} />
-            <p>{item.price}</p>
-          </div>
-        ))}
+      <header>
+        <Title>StoreBot</Title>
+        <Divider />
+      </header>
+      <Row gutter={16}>
+        {data &&
+          data.map((item, index) => (
+            <Col span={6} key={index} gutter={20}>
+              <Card
+                bordered={false}
+                cover={<img alt={item.name + " picture"} src={item.img} />}
+              >
+                <Meta title={item.name} description={item.price} />
+              </Card>
+            </Col>
+          ))}
+      </Row>
     </div>
   );
 }
